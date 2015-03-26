@@ -1,0 +1,23 @@
+<h3>Task Details</h3>
+
+<table width = "40%">
+	<tr>
+		<th style="text-align: left">Name:</th>
+		<td><%= @activity.name %></td>
+	</tr>
+	<tr>
+		<th style="text-align: left">Description:</th>
+		<td><%= @activity.description %></td>
+	</tr>
+	<tr>
+		<th style="text-align: left">Status:</th>
+		<td><%= @activity.done == false ? "Incompleted" : "Complete" %></td>
+	</tr>
+	<tr>
+		<th style="text-align: left">Date Created:</th>
+		<td><%= @activity.created_at %></td>
+	</tr>
+</table>
+
+<br/>
+<%= link_to "Back", activities_path %> | <%= link_to "Edit", edit_activity_path(@activity) %>

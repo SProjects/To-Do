@@ -7,6 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<center><h1>TODO LIST APPLICATION</h1></center>
+<br/>
+
+<% if flash[:notice].present? %>
+  <p>
+    <%= flash[:notice]%>
+  </p>
+<% end %>
 
 <%= yield %>
 
