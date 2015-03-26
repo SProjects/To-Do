@@ -1,0 +1,17 @@
+<h2>Create New Task</h2>
+
+<%= form_for :task, url: tasks_path do |t| %>
+	<p>
+		<%= t.label :title %><br>
+		<%= t.text_field :title %>
+	</p>
+
+	<p>
+		<%= t.label :description %><br>
+		<%= t.text_area :description %>
+	</p>
+
+	<p>
+		<%= t.submit %>
+	</p>
+<% end %>
